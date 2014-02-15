@@ -23,4 +23,6 @@ module Wikicollab
     config.assets.version = '1.0'
     config.assets.initialize_on_precompile = false
   end
+
+
 end
