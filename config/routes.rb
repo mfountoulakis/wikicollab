@@ -1,14 +1,19 @@
 Wikicollab::Application.routes.draw do
-  devise_for :users
+  get "wiki/index"
+  get "wiki/show"
+  get "wiki/new"
+  get "wiki/edit"
   get "welcome/index"
   get "welcome/about"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  devise_for :users
 
   root :to => 'welcome#index'
 
+  match "about" => 'welcome#about', via: :get
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
