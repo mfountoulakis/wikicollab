@@ -26,10 +26,6 @@ border-radius: 20px;
   width: 150px;
  }
 
-.align-right{
-  text-align: right;
-  margin-top: 10px;
-}
 
 .alert{
   float: left;
@@ -42,4 +38,41 @@ border-radius: 20px;
 .sign-up
 {
   width: 100px;
+}
+
+.welcome-user{
+
+}
+
+.float{
+  float: right;
+}
+
+ul.nav-bar{
+list-style-type: none;
+display: inline;
+}
+
+#navigation{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.nav-bar li{
+  display: inline;
+}
+
+.alert{
+  float: right;
+  clear: both;
+}
+
+.wiki-container{
+  height: 450px;
+  overflow: auto;
+}
+
+
+.create_wiki{
+  float: right;
 }

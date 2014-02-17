@@ -8,15 +8,28 @@
 </head>
 <body>
 <div class="container">
-  <div class="align-right">
-  <%= link_to "About", about_path%>
 
-|
+<div id="navigation">
+<ul class="nav-bar">
+<li>
+    <%= link_to "About | ", about_path %>
+</li>
+<li>
+    <%= link_to "Wikis | ", wiki_index_path %>
+</li>
+
  <% if current_user %>
- Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+ <li class="float">
+ Hello <%= current_user.email %>!
+</li>
+ <li> 
+ <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+ </li>
  <% else %>
-  <%= link_to "Sign In", new_user_session_path %>  
-
+ <li>
+  <%= link_to "Sign In", new_user_session_path %> 
+</li>
+</ul>
 </div>
 
   <% end %>
