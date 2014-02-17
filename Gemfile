@@ -5,6 +5,8 @@ gem 'rails', '4.0.2'
 
 gem 'protected_attributes'
 
+gem 'faker'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
