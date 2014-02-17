@@ -1,12 +1,19 @@
+
 <div class="container">
+
 <h1>Welcome#index</h1>
 <div class="sixteen columns">
   <hr>
 <div class="content_wrap">
 <p>Find me in app/views/welcome/index.html.erb</p>
 
+ <% if current_user %>
+ Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+ <% else %>
+   <%= button_to "Sign Up", new_user_session_path%>
 
-<a href="#" class="button">Click Me</a>
+   <% end %>
+
 </div>
   <hr>
 </div>
