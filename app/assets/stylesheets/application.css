@@ -25,3 +25,21 @@ border-radius: 20px;
  .button{
   width: 150px;
  }
+
+.align-right{
+  text-align: right;
+  margin-top: 10px;
+}
+
+.alert{
+  float: left;
+}
+
+.plan-type{
+  text-align: center;
+}
+
+.sign-up
+{
+  width: 100px;
+}

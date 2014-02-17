@@ -1,5 +1,6 @@
 class WikiController < ApplicationController
   def index
+    @Wiki = Wiki.all
   end
 
   def show
