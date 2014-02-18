@@ -14,6 +14,8 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'factory_girl'
+
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
