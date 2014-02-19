@@ -76,3 +76,7 @@ display: inline;
 .create_wiki{
   float: right;
 }
+
+.new-wiki{
+  width: 300px;
+}

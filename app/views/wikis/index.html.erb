@@ -2,9 +2,18 @@
 <h1>Wiki#index</h1>
 
   <div class="wiki-container">
+  <div class="five columns alpha">
+    
     <% @wiki.each do |wiki| %>
     <p><%= link_to wiki.title, wiki%></p>
     <% end %>
+      
+  </div>
+  </div>
+
+  <div class="#">
+    <%= button_to "New Wiki", new_wiki_path, :class => "new-wiki", :method => :get %>
+    
   </div>
 
 </div>
