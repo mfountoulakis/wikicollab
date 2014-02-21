@@ -1,7 +1,6 @@
-class AddUserToWikis < ActiveRecord::Migration
+class AddAdminToUsers < ActiveRecord::Migration
   def change
-    add_column :wikis, :user_id, :integer
-    add_index :wikis, :user_id
+    add_column :users, :admin, :boolean
   end
 
   def self.up

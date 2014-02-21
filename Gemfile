@@ -10,9 +10,11 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'sqlite3'
-
 gem 'pundit'
+
+group :development do
+  gem 'sqlite3'
+end
 
 group :development, :test do
   gem 'rspec-rails'
