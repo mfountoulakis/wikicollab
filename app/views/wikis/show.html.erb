@@ -10,7 +10,6 @@
   <strong>Text:</strong>
   <%= markdown @wiki.body %>
 </p>
-
-<%= link_to "Edit", edit_wiki_path(@wiki) %>
-
 </div>
+
+<%= button_to "Edit", edit_wiki_path(@wiki), :method => :get %>

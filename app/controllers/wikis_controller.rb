@@ -9,6 +9,8 @@ class WikisController < ApplicationController
 
   def new
     @wiki = Wiki.new
+    @posts = policy_scope(Wiki.scoped)
+
   end
 
   def create
@@ -24,6 +26,7 @@ class WikisController < ApplicationController
 
   def update
     @wiki = Wiki.find(params[:id])
+      authorize @wiki
     if @wiki.update_attributes(wiki_params)
       flash[:notice] = "Wiki was updated"
       redirect_to @wiki

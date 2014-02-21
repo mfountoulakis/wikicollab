@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20140220220804) do
     t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "role"
     t.boolean  "admin"
   end
 
