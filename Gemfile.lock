@@ -147,7 +147,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails
   devise
-  factory_girl (~> 4.0)
+  factory_girl
   faker
   jbuilder
   jquery-rails
