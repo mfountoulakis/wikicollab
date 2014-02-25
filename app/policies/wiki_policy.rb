@@ -1,4 +1,5 @@
 class WikiPolicy
+
   attr_reader :user, :wiki
 
   def initialize(user, wiki)
@@ -6,7 +7,28 @@ class WikiPolicy
     @wiki = wiki
   end
 
+  def index?
+    true
+  end
+
+  def new?
+    !!user
+  end
+
+  def edit?
+    !!user
+  end
+
+  def update?
+    !!user
+  end
+
+
   def create?
-    user.admin? or not post.published?
+    !!user
+  end
+
+  def destroy?
+    !!user
   end
 end

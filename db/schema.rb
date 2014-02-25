@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220220804) do
+ActiveRecord::Schema.define(version: 20140225034555) do
+
+  create_table "plans", force: true do |t|
+    t.integer  "subscriptions_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "plans", ["subscriptions_id"], name: "index_plans_on_subscriptions_id"
+
+  create_table "subscriptions", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "stripe_customer_token"
+    t.string   "email"
+    t.string   "plan_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -31,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140220220804) do
     t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "role"
     t.boolean  "admin"
   end
 

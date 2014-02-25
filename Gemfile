@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+source 'https://code.stripe.com'
+
+gem 'stripe'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
@@ -18,7 +21,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
 end
 
 # Use SCSS for stylesheets
@@ -40,8 +43,6 @@ gem 'devise'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'

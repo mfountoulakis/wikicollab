@@ -2,6 +2,7 @@ Wikicollab::Application.routes.draw do
  
 
 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -9,6 +10,8 @@ Wikicollab::Application.routes.draw do
   devise_for :users
 
   resources :wikis
+  resources :subscriptions
+  resources :plans
 
   root :to => 'welcome#index'
 

@@ -9,8 +9,7 @@ class WikisController < ApplicationController
 
   def new
     @wiki = Wiki.new
-    @posts = policy_scope(Wiki.scoped)
-
+    authorize @wiki
   end
 
   def create
@@ -40,10 +39,21 @@ class WikisController < ApplicationController
     @wiki = Wiki.find(params[:id])
   end
 
+  def destroy
+    @wiki = Wiki.find(params[:id])
+    authorize @wiki
+    if @wiki.destroy
+      flash[:notice] = "Wiki was succesfully removed"
+      redirect_to @wiki
+    else
+      flash[:error] = "There was an error removing the wiki"
+    end
+  end
+
 
   private
 
   def wiki_params
-    params.require(:wiki).permit(:body, :title,)
+    params.require(:wiki).permit(:body, :title)
   end
 end
