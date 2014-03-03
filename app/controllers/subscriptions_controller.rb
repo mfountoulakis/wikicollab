@@ -1,12 +1,12 @@
 class SubscriptionsController < ApplicationController
   
   def index
-    @subscription = Subscription.all
-    
+    @subscription = Subscription.all 
   end
 
   def new
-    @subscription = Subscription.new
+    @subscription = Subscription.new(plan_id: params[:plan_id])
+    
   end
 
   def create
@@ -25,6 +25,5 @@ class SubscriptionsController < ApplicationController
 
 def subscription_params
   params.require(:subscription).permit(:subscription, :email, :stripe_customer_token, :stripe_card_token, :plan_id)
-  
   end
 end

@@ -22,6 +22,9 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+
 end
 
 # Use SCSS for stylesheets

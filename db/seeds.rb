@@ -21,17 +21,12 @@ rand(4..10).times do
     p.update_attribute(:created_at, Time.now - rand(600..31536000))
 
 
-  u = User.new(
-    name: 'Admin User',
-    email: 'admin@example.com', 
-    password: 'helloworld', 
-    password_confirmation: 'helloworld')
-  u.skip_confirmation!
-  u.toggle!(:admin)
-  u.save
-
     end
   end
+end
+
+if Plan.count == 0
+   Plan.create!
 end
 
 puts "Seed finished"
