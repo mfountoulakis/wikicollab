@@ -1,0 +1,12 @@
+<%= form_for wiki do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  
+  <%= f.label :collaborators %>
+  <%= f.collection_select :collaborator_ids, @users, :id, :name, {}, {multiple: true} %>
+
+  <%= f.submit "Save" %>
+<% end %>

@@ -3,12 +3,30 @@
 
 
 
-<h1>Welcome#index</h1>
+<div class="featured"><h1>WikiCollab</h1>
 <div class="sixteen columns">
+  A Saas wiki-style collaboration tool
   <hr>
+</div>
+</div>
 <div class="content_wrap">
-<p>Find me in app/views/welcome/index.html.erb</p>
 
+ <div class="def_box">
+<div class="eight columns omega"><h1>
+ Free Plan
+</h1>
+<p>
+  
+  Create and edit Public Wikis using markdown
+</p>
+</div>
+
+<div class="eight columns omega"><h1>Premium Plan</h1>
+
+<p>Premium Plan</p>
+</div>
+
+<div class="sixteen columns">
  <% if current_user %>
  Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
  <% else %>
@@ -16,10 +34,13 @@
 
    <% end %>
 
+ </div>
+
 </div>
   <hr>
 </div>
-<div class="eight columns alpha plan-type">Free Plan</div>
 <div class="eight columns omega plan-type"> 
+
+
 
 </div>

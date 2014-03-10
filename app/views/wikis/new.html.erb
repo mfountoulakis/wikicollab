@@ -1,10 +1,4 @@
 <h1>Wiki#new</h1>
-<%= form_for @wiki do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<%= render partial: 'form', locals: { wiki: @wiki } %>
 
-  <%= f.label :body %>
-  <%= f.text_area :body %>
-
-  <%= f.submit "Save" %>
-<% end %>
+   <%#= button_to "New Wiki", new_wiki_path, :class => "new-wiki", :method => :get %>

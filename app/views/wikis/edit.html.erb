@@ -3,13 +3,8 @@
 
 <h1>Wiki#edit</h1>
 <p>Find me in app/views/wiki/edit.html.erb</p>
-<%= form_for @wiki do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<%= render partial: 'form', locals: { wiki: @wiki } %>
 
-  <%= f.label :body %>
-  <%= f.text_area :body %>
 
-  <%= f.submit "Save" %>
-<% end %>
+
 </div>

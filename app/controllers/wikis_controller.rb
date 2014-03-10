@@ -9,7 +9,7 @@ class WikisController < ApplicationController
 
   def new
     @wiki = Wiki.new
-    authorize @wiki
+    @users = User.all #Should not include logged in user
   end
 
   def create
@@ -25,7 +25,6 @@ class WikisController < ApplicationController
 
   def update
     @wiki = Wiki.find(params[:id])
-      authorize @wiki
     if @wiki.update_attributes(wiki_params)
       flash[:notice] = "Wiki was updated"
       redirect_to @wiki
@@ -37,7 +36,10 @@ class WikisController < ApplicationController
 
   def edit
     @wiki = Wiki.find(params[:id])
+    @users = User.all #Should not include logged in user
   end
+
+
 
   def destroy
     @wiki = Wiki.find(params[:id])
@@ -51,9 +53,11 @@ class WikisController < ApplicationController
   end
 
 
+
   private
 
   def wiki_params
-    params.require(:wiki).permit(:body, :title)
+    params.require(:wiki).permit(:body, :title, collaborator_ids: [])
   end
+
 end

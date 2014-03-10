@@ -12,6 +12,8 @@ Wikicollab::Application.routes.draw do
   resources :wikis
   resources :subscriptions
   resources :plans
+  resources :collaborations
+  resources :users
 
   root :to => 'welcome#index'
 
