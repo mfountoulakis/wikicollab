@@ -12,8 +12,10 @@ rand(4..10).times do
 
   rand(5..12).times do
     p = u.wikis.create(
+      email: Faker::Internet.email, 
       title: Faker::Lorem.words(rand(1..10)).join(" "), 
       body: Faker::Lorem.paragraphs(rand(1..4)).join("\n"))
+
     # set the created_at to a time within the past year
     p.update_attribute(:created_at, Time.now - rand(600..31536000))
 

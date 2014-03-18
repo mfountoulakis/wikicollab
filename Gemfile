@@ -13,6 +13,7 @@ group :production do
   gem 'rails_12factor'
 end
 
+
 gem 'pundit'
 
 group :development do
@@ -50,7 +51,11 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
 
-gem 'skeleton-rails'
+gem 'chosen-rails'
+
+
+gem 'purecss-rails'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

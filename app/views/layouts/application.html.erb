@@ -12,15 +12,12 @@
 
 
 
-  <div class="nav_color">
-<div class="container">
-
-<div id="navigation">
-<ul class="nav-bar">
-    <%= link_to "About | ", about_path, :class => "nav-link" %>
+<div class="pure-menu pure-menu-open pure-menu-horizontal fixed">
+  <li>
+    <%= link_to "About ", about_path, :class => "nav-link" %>
 </li>
 <li>
-    <%= link_to "Wikis | ", wikis_path %>
+    <%= link_to "Wikis ", wikis_path %>
 </li>
 
  <% if current_user %>
@@ -41,7 +38,7 @@
   <% end %>
  <% if flash[:notice] %>
 <!-- DEVISE FLASH NOTICES -->
-        <div class="alert alert-success">
+        <div class="alertify.alert">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
           <%= flash[:notice] %>
         </div>

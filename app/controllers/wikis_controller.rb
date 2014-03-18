@@ -1,19 +1,27 @@
 class WikisController < ApplicationController
+
   def index
-    @wiki = Wiki.all
+    @public_wikis = Wiki.where(private: false)
+    @private_wikis = current_user.wikis.where(private: true)
+    @collaborations = current_user.collaborations
   end
 
   def show
     @wiki = Wiki.find(params[:id])
+
   end
 
   def new
     @wiki = Wiki.new
-    @users = User.all #Should not include logged in user
+     authorize @wiki
+    @users = User.without_user(current_user)
   end
+
+
 
   def create
     @wiki = Wiki.new(wiki_params)
+    authorize @wiki
    if @wiki.save
     flash[:notice] = "Wiki was saved."
     redirect_to @wiki
@@ -36,7 +44,7 @@ class WikisController < ApplicationController
 
   def edit
     @wiki = Wiki.find(params[:id])
-    @users = User.all #Should not include logged in user
+    @users = User.without_user(current_user)#Should not include logged in user
   end
 
 
@@ -53,11 +61,16 @@ class WikisController < ApplicationController
   end
 
 
-
   private
 
   def wiki_params
-    params.require(:wiki).permit(:body, :title, collaborator_ids: [])
+    params.require(:wiki).permit(:without_user,
+                                 :body,
+                                 :title,
+                                 :susbscription,
+                                 :name,
+                                 :private,
+                                 collaborator_ids: [])
   end
 
 end

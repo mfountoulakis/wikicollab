@@ -1,46 +1,34 @@
 
-<div class="container">
+<div class="banner">
+   
 
-
-
-<div class="featured"><h1>WikiCollab</h1>
-<div class="sixteen columns">
-  A Saas wiki-style collaboration tool
-  <hr>
-</div>
-</div>
-<div class="content_wrap">
-
- <div class="def_box">
-<div class="eight columns omega"><h1>
- Free Plan
-</h1>
-<p>
-  
-  Create and edit Public Wikis using markdown
-</p>
-</div>
-
-<div class="eight columns omega"><h1>Premium Plan</h1>
-
-<p>Premium Plan</p>
-</div>
-
-<div class="sixteen columns">
- <% if current_user %>
+    <div class="banner-head">
+        Saas Wiki Collaboration Tool<br>
+      
+<div class="primary_signin">
+            <% if current_user %>
  Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
  <% else %>
-   <%= button_to "Sign in", new_user_session_path, :class => "sign-up", :method => :get %>
+  
+   <%= button_to "Sign in", new_user_session_path, :class => "pure-button pure-button-primary ", :method => :get %>
 
    <% end %>
-
  </div>
+</div>
+     
+
+ 
 
 </div>
-  <hr>
-</div>
-<div class="eight columns omega plan-type"> 
 
 
 
-</div>
+</tbody>
+
+</table> <!-- end table #2 -->
+
+
+
+ </div> <!--end table wrapper-->
+
+

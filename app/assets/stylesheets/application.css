@@ -9,102 +9,65 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require purecss
  *= require_tree .
-  = require base
-  = require layout
-  = require skeleton
+  = require chosen
+
+
  */
-
-
-
-.texture_wrap{
-    background-image: url('http://subtlepatterns.com/patterns/linedpaper.png');
-    height:900px;
-  }
-
-.modified{
-  background-image: url('http://subtlepatterns.com/patterns/linedpaper.png');
+a {
+  color: #d6d6d6
 }
 
-.sign_up{
+h1{
+  font-size: 16px;
+  color: #b0cadb
+}
+
+table th{
+  text-align: center;
+  background-color: bisque;
+}
+
+.pricing_table{
+  width: 900px;
+  margin: auto;
   text-align: center;
 }
 
-.featured{
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-    
-
-.content_wrap {
-text-align: center;
--webkit-border-radius: 20px;
--moz-border-radius: 20px;
-border-radius: 20px;
-}
- .button{
-  width: 150px;
- }
-
-
-.alert{
-  float: left;
+.primary_signin{
+  margin-top: 20px;
+  font-size: 20px;
 }
 
-.plan-type{
-  text-align: center;
+.banner {
+    background: transparent url('http://subtlepatterns.com/patterns/geometry.png') 0 0 no-repeat fixed;
+    text-align: center;
+    background-repeat: repeat-x;
+    background-size: ;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
+
+    height: 400px;
+    width: 100%;
+    margin-bottom: 3em;
+    display: table;
 }
 
-.sign-up
+.content_padding
 {
-  width: 100px;
+  padding: 2em 3em 0;
 }
 
-.welcome-user{
 
-}
+ .banner-head {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 4em;
+    color: #b0cadb;
+    font-weight: 500;
+    text-shadow: 0 1px 1px black;
+    }
 
-.float{
-  float: right;
-}
 
-ul.nav-bar{
-list-style-type: none;
-display: inline;
-}
 
-.nav_color{
-
-  background-color: grey;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-image: url('http://subtlepatterns.com/patterns/leather_1.png');
-}
-
-.nav-bar li{
-  display: inline;
-}
-
-.alert{
-  float: right;
-  clear: both;
-}
-
-.wiki-container{
-  height: 450px;
-  overflow: auto;
-}
-
-.create_wiki{
-  float: right;
-}
-
-.def_box{
-  height: 200px;
- text-align: center;
-
-}
-
-.new-wiki{
-  width: 300px;
-}

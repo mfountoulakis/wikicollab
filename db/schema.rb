@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140307154426) do
+ActiveRecord::Schema.define(version: 20140314144429) do
 
   create_table "plans", force: true do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140307154426) do
     t.string   "email"
     t.string   "stripe_customer_token"
     t.string   "plan_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -63,6 +64,8 @@ ActiveRecord::Schema.define(version: 20140307154426) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "email"
+    t.boolean  "private",    default: false
   end
 
   add_index "wikis", ["user_id"], name: "index_wikis_on_user_id"

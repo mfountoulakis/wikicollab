@@ -1,15 +1,38 @@
-<div class="container">
-  <h1>Wiki#show</h1>
+<div class="sidebar pure-u-1 pure-u-med-1-4">
+        <div class="header">
+            <hgroup>
+                <h1 class="brand-title">A Sample Blog</h1>
+                <h2 class="brand-tagline">Creating a blog layout using Pure</h2>
+            </hgroup>
 
-<p>
-  <strong>Title:</strong>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="http://purecss.io">Pure</a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="#">
+    <a class="pure-button" data-method="get" href="/wikis/new">New Wiki</a>
+    
+  
+                    </div></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+<div class="content pure-u-1 pure-u-med-3-4">
+
+  <h2>Title:</h2>
+
   <%= markdown @wiki.title %>
-</p>
+
  
-<p>
-  <strong>Text:</strong>
+  <h2>Text:</h2>
   <%= markdown @wiki.body %>
-</p>
+
 
 
 <%= button_to "Edit", edit_wiki_path(@wiki), :method => :get %>
@@ -17,7 +40,5 @@
 
 
 
-
-</div>
 
 </div>

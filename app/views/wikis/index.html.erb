@@ -1,20 +1,61 @@
-<div class="container">
+
+<!-- end sidebar -->
+<div id="layout" class="pure-g">
+
+  <div class="sidebar pure-u-1 pure-u-med-1-4">
+        <div class="header">
+            <hgroup>
+                <h1 class="brand-title">A Sample Blog</h1>
+                <h2 class="brand-tagline">Creating a blog layout using Pure</h2>
+            </hgroup>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <%= link_to "Subscribe", new_subscription_path, :class=> "pure-button", :method => :get %>
+                    </li>
+                    <li class="nav-item">
+                      <div class="#">
+    <%= link_to "New Wiki", new_wiki_path, :class => "pure-button", :method => :get %>
+    
+  
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<div class="content pure-u-1 pure-u-med-3-4">
+
+
+
+
 <h1>Wiki#index</h1>
 
-  <div class="wiki-container">
+
+
+
+
   <div class="five columns alpha">
     
-    <% @wiki.each do |wiki| %>
-    <p><%= link_to wiki.title, wiki%></p>
+    <% @public_wikis.each do |wiki| %>
+    <h2 class="post-title"><%= link_to wiki.title, wiki%></h2>
+
+
+
     <% end %>
+
+    <%# make sure user logged in and subscribed and display other wikis%>
+
+
       
   </div>
   </div>
 
-  <div class="#">
-    <%= button_to "New Wiki", new_wiki_path, :class => "new-wiki", :method => :get %>
-    
-  </div>
 
 
-</div>
+
+
+</div> 
+
+<!-- end layout div -->

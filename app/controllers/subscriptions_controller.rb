@@ -1,7 +1,7 @@
 class SubscriptionsController < ApplicationController
-  
+  before_filter :authenticate_user!
   def index
-    @subscription = Subscription.all 
+  @subscription = Subscription.all 
   end
 
   def new
@@ -11,12 +11,13 @@ class SubscriptionsController < ApplicationController
 
   def create
     @subscription = Subscription.new(subscription_params)
-    if @subscription.save_with_payment
+    if @subscription.save_with_payment  
       redirect_to @subscription, :notice => "Thank you for subscribing!"
     else
       render :new
     end
   end
+
 
   def show
     @subscription = Subscription.find(params[:id])
@@ -24,6 +25,6 @@ class SubscriptionsController < ApplicationController
 
 
 def subscription_params
-  params.require(:subscription).permit(:subscription, :email, :stripe_customer_token, :stripe_card_token, :plan_id)
+  params.require(:subscription).permit(:subscription, :email, :stripe_customer_token, :stripe_card_token, :plan_id, :subscribed)
   end
 end
