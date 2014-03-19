@@ -3,8 +3,12 @@ source 'https://code.stripe.com'
 
 gem 'stripe'
 
+gem 'less-rails-bootstrap'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+ruby "2.1.0"
 
 gem 'faker'
 
@@ -54,7 +58,6 @@ gem 'chosen-rails'
 
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-
 gem "twitter-bootstrap-rails"
 
 
@@ -65,6 +68,7 @@ gem 'flatui-rails'
 
   # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', require: false
+
 
 
 
