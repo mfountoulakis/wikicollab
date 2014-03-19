@@ -14,7 +14,7 @@ gem 'rails_12factor'
 
 gem 'pundit'
 
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
 
 
 gem 'rspec-rails'
