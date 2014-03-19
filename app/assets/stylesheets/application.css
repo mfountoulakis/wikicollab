@@ -155,12 +155,9 @@ table th{
       rgba(255, 0, 0, 0.11), 
       rgba(52, 73, 94, 0.22)
     ),
-    transparent url('http://subtlepatterns.com/patterns/geometry.png') 0 0 no-repeat fixed;
+    url('http://subtlepatterns.com/patterns/geometry.png') 0 0 no-repeat fixed;
     text-align: center;
     background-repeat: repeat;
-    background-size: 
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
-
     height:100%;
     width: 100%;
     display: table;
