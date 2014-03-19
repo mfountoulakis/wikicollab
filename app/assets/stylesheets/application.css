@@ -9,14 +9,123 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require purecss
  *= require_tree .
   = require chosen
+*= require flat-ui
 
 
  */
 a {
   color: #d6d6d6
+}
+
+html, body {
+  height: 100%;
+}
+
+
+.splash_control{
+width: 940px;
+height: 500px;
+margin: auto;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+max-width: 100%;
+max-height: 100%;
+overflow: auto;}
+
+.col-xs-3{
+}
+
+.bttn_huge{
+  height: 70px;
+}
+
+.margin{
+margin-bottom: 0px !important;
+}
+
+.absoluteCenter {
+ /* Must manually set width/height */
+ width:800px;
+ height:500px;
+
+ /* The magic centering code */
+ margin:auto;
+ position:absolute;
+ top:0;bottom:0; /* Aligns Vertically - Remove for Horizontal Only */
+ left:0;right:0; /* Aligns Horizontally - Remove for Vertical Only  */
+
+ /* Prevent div from overflowing main window */
+ max-width:100%;
+ max-height:100%;
+ overflow:auto;
+}
+
+
+.dk_fouc select{
+
+position: relative !important;
+top: 0 !important;
+visibility:  inherit !important;
+}
+
+.absoluteCenterSignUp {
+ /* Must manually set width/height */
+ width:800px;
+ height:700px;
+
+ /* The magic centering code */
+ margin:auto;
+ position:absolute;
+ top:0;bottom:0; /* Aligns Vertically - Remove for Horizontal Only */
+ left:0;right:0; /* Aligns Horizontally - Remove for Vertical Only  */
+
+ /* Prevent div from overflowing main window */
+ max-width:100%;
+ max-height:100%;
+ overflow:auto;
+}
+
+
+/* IE 7 and Below */
+:first-child+html .absoluteCenter,
+* html .absoluteCenter {
+ /* Place code here to override all above values, and add IE friendly centering */
+}
+
+.sidebar {
+    color: #fff;
+    width: 20%;
+    background-color: #1abc9c;
+}
+
+
+.bttn_width{
+  width: 206px !important;
+}
+
+.bttn_widthSecondary{
+width: 150px !important;
+}
+
+.container{
+  height: 100% !important;
+}
+
+.sign_in{
+  width:700px;
+  margin: auto;
+}
+
+.clipboard{
+  float: right;
+  width: 40%;
+  margin-left: auto;
+  margin-right: 50px;
 }
 
 h1{
@@ -41,22 +150,21 @@ table th{
 }
 
 .banner {
-    background: transparent url('http://subtlepatterns.com/patterns/geometry.png') 0 0 no-repeat fixed;
+    background: 
+    linear-gradient(
+      rgba(255, 0, 0, 0.11), 
+      rgba(52, 73, 94, 0.22)
+    ),
+    transparent url('http://subtlepatterns.com/patterns/geometry.png') 0 0 no-repeat fixed;
     text-align: center;
-    background-repeat: repeat-x;
-    background-size: ;
+    background-repeat: repeat;
+    background-size: 
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
 
-    height: 400px;
+    height:100%;
     width: 100%;
-    margin-bottom: 3em;
     display: table;
-}
-
-.content_padding
-{
-  padding: 2em 3em 0;
-}
+  }
 
 
  .banner-head {
@@ -68,6 +176,14 @@ table th{
     font-weight: 500;
     text-shadow: 0 1px 1px black;
     }
+
+    
+
+.content_padding
+{
+  padding: 4em 3em 0;
+}
+
 
 
 

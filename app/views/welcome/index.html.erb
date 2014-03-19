@@ -1,23 +1,55 @@
 
 <div class="banner">
-   
+   <div class="container">
 
+
+
+
+<div class="splash_control">
     <div class="banner-head">
         Saas Wiki Collaboration Tool<br>
-      
-<div class="primary_signin">
-            <% if current_user %>
- Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
- <% else %>
-  
-   <%= button_to "Sign in", new_user_session_path, :class => "pure-button pure-button-primary ", :method => :get %>
+        <br>
 
-   <% end %>
- </div>
-</div>
-     
+   
+
+<!-- Collumn 1 -->
+
+
+<div class="container">
+<div class="row">
+        <div class="span6">
+          <div class="tile">
+            <img src="http://designmodo.github.io/Flat-UI/images/icons/svg/retina.svg" alt="Infinity-Loop" class="tile-image">
+            <h3 class="tile-title">Sign in</h3>
+            <p>Create public Wikis with Markdown.</p>
+  <%= button_to "Sign In", new_user_session_path, :class => "btn btn-primary btn-large btn-block", :method => :get %>
+          </div>
+        </div>
+
+
+        <div class="span6">
+          <div class="tile">
+            <img src="http://designmodo.github.io/Flat-UI/images/icons/svg/toilet-paper.svg" alt="Infinity-Loop" class="tile-image">
+            <h3 class="tile-title">Subscribe</h3>
+            <p>Create public or private Wikis with collaborators.</p>
+ <%= button_to "Subscribe", new_user_registration_path  , :class => "btn btn-primary btn-large btn-block", :method => :get %>
+          </div>
+        </div>
+
+      </div>
+        <!-- end row -->
+
+      </div>
+
+  </div>
+ 
+
+
+<!-- Collumn 1 -->
 
  
+</div>
+
 
 </div>
 

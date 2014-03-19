@@ -12,8 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require_tree .
-//= require chosen-jquery
 //= require wiki
+//= require flat-ui
 
 

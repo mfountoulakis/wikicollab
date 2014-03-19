@@ -13,7 +13,6 @@ group :production do
   gem 'rails_12factor'
 end
 
-
 gem 'pundit'
 
 group :development do
@@ -54,7 +53,15 @@ gem 'jbuilder'
 gem 'chosen-rails'
 
 
-gem 'purecss-rails'
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+
+gem "twitter-bootstrap-rails"
+
+
+
+
+gem 'flatui-rails'
 
 
 group :doc do

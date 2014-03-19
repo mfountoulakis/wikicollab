@@ -1,18 +1,15 @@
 
-<form class="pure-form pure-form-stacked">
-    <fieldset>
 
-<%= form_for wiki do |f| %>
-  <label><%= f.label :title %></label>
+<%= form_for(wiki) do |f| %>
+  <%= f.label :title %>
   <%= f.text_field :title %>
 
   <%= f.label :body %>
   <%= f.text_area :body %>
 
-  
 
 
-<% if current_user && wiki.user == current_user && current_user.subscription%>
+<% if current_user && wiki.user == current_user && current_user.subscribed%>
 
   <%= f.label :collaborators %>
 
@@ -23,7 +20,8 @@
 
 <% end %>
 
-  <%= f.submit "Save" %>
+
+
+  <%= f.submit "Save", :class => 'btn btn-block btn-lg btn-success bttn_width' %>
 <% end %>
-</fieldset>
 </div>

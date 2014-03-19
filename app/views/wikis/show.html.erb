@@ -1,4 +1,4 @@
-<div class="sidebar pure-u-1 pure-u-med-1-4">
+<div class="sidebar">
         <div class="header">
             <hgroup>
                 <h1 class="brand-title">A Sample Blog</h1>
@@ -8,8 +8,7 @@
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a class="pure-button" href="http://purecss.io">Pure</a>
-                    </li>
+  <%= link_to "Wikis", wikis_path, :class=> "pure-button", :method => :get %>                    </li>
                     <li class="nav-item">
                       <div class="#">
     <a class="pure-button" data-method="get" href="/wikis/new">New Wiki</a>
@@ -23,7 +22,7 @@
 
 
 
-<div class="content pure-u-1 pure-u-med-3-4">
+<div class="content">
 
   <h2>Title:</h2>
 
@@ -35,8 +34,8 @@
 
 
 
-<%= button_to "Edit", edit_wiki_path(@wiki), :method => :get %>
-<%= button_to "Delete Wiki", @wiki, method: :delete %>
+<%= button_to "Edit", edit_wiki_path(@wiki), :class => 'btn btn-block btn-lg btn-primary bttn_width',  :method => :get%>
+<%= button_to "Delete Wiki", @wiki, :class => 'btn btn-block btn-lg btn-danger bttn_width' , method: :delete %>
 
 
 
