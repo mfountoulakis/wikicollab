@@ -8,13 +8,15 @@ gem 'rails', '4.0.2'
 
 gem 'faker'
 
-gem 'pg'
 gem 'rails_12factor'
 
 
 gem 'pundit'
 
+
+gem 'pg', group: [:production]
 gem 'sqlite3', group: [:development, :test]
+
 
 
 gem 'rspec-rails'
