@@ -8,24 +8,21 @@ gem 'rails', '4.0.2'
 
 gem 'faker'
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
+gem 'pg'
+gem 'rails_12factor'
+
 
 gem 'pundit'
 
-group :development do
-  gem 'sqlite3'
-end
+gem 'sqlite3'
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'database_cleaner'
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
 
-end
+gem 'rspec-rails'
+gem 'factory_girl_rails'
+gem 'database_cleaner'
+gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -64,10 +61,9 @@ gem "twitter-bootstrap-rails"
 gem 'flatui-rails'
 
 
-group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
+gem 'sdoc', require: false
+
 
 
 
