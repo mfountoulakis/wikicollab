@@ -11,8 +11,10 @@ class SubscriptionsController < ApplicationController
 
   def create
     @subscription = Subscription.new(subscription_params)
+    @subscription.user = current_user
     if @subscription.save_with_payment  
-      redirect_to @subscription, :notice => "Thank you for subscribing!"
+      flash[:notice] = "Thank You For Subscribing"
+      redirect_to wikis_path 
     else
       render :new
     end

@@ -3,20 +3,43 @@
 <div id="layout" class="pure-g">
 
   <div class="sidebar">
+
+   
         <div class="header">
             <hgroup>
+
+
+
+
+            <% if current_user %>
+<h1 class="brand-title"> Hello</h1> <%= current_user.email %>!</h1> <%= link_to "Sign out",destroy_user_session_path, :class => "visible", method: :delete %>
+<% end %>
+
+
+  
+
+
+<h1 class="brand-title"><h1 id="notice"><%= notice %></h1>
                 <h1 class="brand-title">A Sample Blog</h1>
-                <h2 class="brand-tagline">Creating a blog layout using Pure</h2>
+                <h2 class="brand-tagline">Creating a blog layout sort of using Pure</h2>
             </hgroup>
 
             <nav class="nav">
                 <ul>
                     <li class="nav-item">
-                        <%= link_to "Subscribe", new_subscription_path, :class=> "btn btn-block btn-lg btn-primary bttn_widthSecondary", :method => :get %>
+                  
                     </li>
                     <li class="nav-item">
                       <div class="#">
-    <%= link_to "New Wiki", new_subscription_path, :class => "btn btn-block btn-lg btn-info bttn_widthSecondary", :method => :get %>
+       <% if current_user.subscription%>
+   <%= link_to "New wiki", new_wiki_path, :class=> "btn btn-block btn-lg btn-primary bttn_widthSecondary", :method => :get %>
+
+       <% else %>
+
+
+  <%= link_to "Subscribe", new_subscription_path, :class=> "btn btn-block btn-lg btn-primary bttn_widthSecondary", :method => :get %>
+
+ <%end%>
     
   
                     </li>
@@ -25,26 +48,25 @@
         </div>
     </div>
 
-<div class="content pure-u-1 pure-u-med-3-4">
-
-
-
-
-<h1>Wiki#index</h1>
+<div class="content ">
 
 
 
 
 
   <div class="five columns alpha">
-    
+    <% if !!current_user && current_user.subscribed? %>
+      <% @private_wikis.each do |wiki| %>
+          <h4 class="post-title"><%= link_to wiki.title, wiki%></h4>
+      <% end %>
+    <% end %>
+
     <% @public_wikis.each do |wiki| %>
     <h2 class="post-title"><%= link_to wiki.title, wiki%></h2>
 
 
 
     <% end %>
-
     <%# make sure user logged in and subscribed and display other wikis%>
 
 

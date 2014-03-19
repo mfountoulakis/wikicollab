@@ -1,6 +1,11 @@
 <div class="container">
 
-<%= form_for @subscription, :html => { :class => "pure-form pure-form-stacked content_padding" }  do |f|  %>
+<div class="absoluteCenter">
+
+<%= form_for @subscription, :html => { :class => "login-form sign_in" }  do |f|  %>
+
+
+<img class="clipboard" src="http://designmodo.github.io/Flat-UI/images/icons/svg/gift-box.svg" alt="Clipboard">
 
 <h1>Subscribe</h1>
   <% if @subscription.errors.any? %>
@@ -58,6 +63,9 @@
     <%= f.submit "Subscribe", :class=> "btn btn-block btn-lg btn-success bttn_width"  %>
   </div>
  <% end %>
+
+</div>
+<!-- end absolute center -->
 </div>
 </div>
 </div>

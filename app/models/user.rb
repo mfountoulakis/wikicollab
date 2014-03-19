@@ -14,10 +14,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  after_create :subscription
+  after_create :subscribed
 
-  def subscription
-    !!self.subscribed
+  def subscribed?
+    !!self.subscription
   end
 
 end

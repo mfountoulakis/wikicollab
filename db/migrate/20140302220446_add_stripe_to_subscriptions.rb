@@ -6,7 +6,6 @@ class AddStripeToSubscriptions < ActiveRecord::Migration
       t.string :plan_id
       t.belongs_to :user
 
-
       t.timestamps
     end
   end

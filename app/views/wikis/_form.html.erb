@@ -9,7 +9,7 @@
 
 
 
-<% if current_user && wiki.user == current_user && current_user.subscribed%>
+<% if current_user && current_user.subscribed?%>
 
   <%= f.label :collaborators %>
 
