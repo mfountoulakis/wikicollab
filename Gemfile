@@ -19,7 +19,7 @@ gem 'pundit'
 
 
 gem 'pg'
-gem 'sqlite3', group: [:development, :test]
+gem 'sqlite3'
 
 
 
