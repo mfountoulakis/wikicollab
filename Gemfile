@@ -18,7 +18,7 @@ gem 'rails_12factor'
 gem 'pundit'
 
 
-gem 'pg', group: [:production]
+gem 'pg'
 gem 'sqlite3', group: [:development, :test]
 
 
