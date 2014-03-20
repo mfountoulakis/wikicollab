@@ -21,4 +21,4 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: wikicollab_production
+  database: myapp_development

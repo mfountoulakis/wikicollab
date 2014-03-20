@@ -19,7 +19,7 @@ gem 'pundit'
 
 
 gem 'pg'
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
 
 
 
@@ -68,6 +68,8 @@ gem 'flatui-rails'
 
   # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', require: false
+
+
 
 
 
