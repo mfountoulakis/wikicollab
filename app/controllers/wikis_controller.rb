@@ -10,12 +10,12 @@ class WikisController < ApplicationController
     @wiki = Wiki.find(params[:id])
   end
 
+
   def new
     @wiki = Wiki.new
      authorize @wiki
     @users = User.without_user(current_user)
   end
-
 
 
   def create
@@ -30,6 +30,7 @@ class WikisController < ApplicationController
     render :new
    end
   end
+
 
   def update
     @wiki = Wiki.find(params[:id])
@@ -46,7 +47,6 @@ class WikisController < ApplicationController
     @wiki = Wiki.find(params[:id])
     @users = User.without_user(current_user)#Should not include logged in user
   end
-
 
 
   def destroy

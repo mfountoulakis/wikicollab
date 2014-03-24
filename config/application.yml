@@ -1,0 +1,3 @@
+development:
+  SENDGRID_USERNAME: "aapp23188528@heroku.com"
+  SENDGRID_PASSWORD: "rw0eaeki"
