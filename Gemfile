@@ -62,8 +62,10 @@ gem "twitter-bootstrap-rails"
 gem 'flatui-rails'
 
 
+
   # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', require: false
+
 
 
 
