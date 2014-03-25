@@ -16,5 +16,7 @@
 //= require_tree .
 //= require wiki
 //= require flat-ui
+//= require chosen-jquery
+
 
 

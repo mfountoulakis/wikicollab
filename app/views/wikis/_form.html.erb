@@ -13,14 +13,14 @@
 
   <%= f.label :collaborators %>
 
-  <%= f.collection_select :collaborator_ids, @users, :id, :name, {}, {multiple: true, class: 'chosen-select'} %>
+  <%= f.collection_select :collaborator_ids, @users, :id, :name, {}, {multiple: true, class: "chosen-select"} %>
 
-  <%= f.label :private %>
+  <%= f.label :private? %>
   <%= f.check_box :private %>
 
+
+
 <% end %>
-
-
 
   <%= f.submit "Save", :class => 'btn btn-block btn-lg btn-success bttn_width' %>
 <% end %>

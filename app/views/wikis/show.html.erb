@@ -1,20 +1,42 @@
-<div class="sidebar">
+<!-- end sidebar -->
+<div id="layout" class="pure-g">
+
+  <div class="sidebar">
+
+
+
+   
         <div class="header">
             <hgroup>
+
+            <% if current_user %>
+<h1 class="brand-title"> Hello</h1> <%= current_user.email %>!</h1> <%= link_to "Sign out",destroy_user_session_path, :class => "visible", method: :delete %>
+<% end %>
+
+
+  
+
+
+<h1 class="brand-title"><h1 id="notice"><%= notice %></h1>
                 <h1 class="brand-title">A Sample Blog</h1>
-                <h2 class="brand-tagline">Creating a blog layout using Pure</h2>
+                <h2 class="brand-tagline">Creating a blog layout sort of using Pure</h2>
             </hgroup>
 
             <nav class="nav">
                 <ul>
                     <li class="nav-item">
-  <%= link_to "Wikis", wikis_path, :class=> "pure-button", :method => :get %>                    </li>
+                  
+                    </li>
                     <li class="nav-item">
                       <div class="#">
-    <a class="pure-button" data-method="get" href="/wikis/new">New Wiki</a>
-    
+
+                        
+
+
+  <%= link_to "Wikis", wikis_path, :class=> "btn btn-block btn-lg btn-primary bttn_widthSecondary", :method => :get %>
+
   
-                    </div></li>
+                    </li>
                 </ul>
             </nav>
         </div>

@@ -10,6 +10,7 @@ rand(4..10).times do
   u.skip_confirmation!
   u.save
 
+
   rand(5..12).times do
     p = u.wikis.create(
       email: Faker::Internet.email, 
@@ -22,6 +23,14 @@ rand(4..10).times do
 
   end
 end
+
+u = User.new(email: 'fountoulakismanos@gmail.com', 
+            password: 'password', 
+            password_confirmation: 'password'
+            )
+u.skip_confirmation!
+u.save
+
 
 
 if Plan.count == 0

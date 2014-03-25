@@ -8,12 +8,20 @@
     padding: 0;
 }
 
+
 .header {
     text-align: center;
     top: auto;
     margin: 3em auto;
 }
 
+#wiki_private{
+    margin-bottom:5px;
+}
+
+#dk_container_wiki_collaborator_ids{
+display:none
+}
 
 .brand-title,
 .brand-tagline {
@@ -155,6 +163,8 @@
         top: 0;
         bottom: 0;
     }
+
+    
  .wiki{
   color:#d6d6d6;
   font-weight:bold;
