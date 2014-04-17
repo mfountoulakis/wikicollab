@@ -24,7 +24,7 @@ rand(4..10).times do
   end
 end
 
-u = User.new(email: 'fountoulakismanos@gmail.com', 
+u = User.new(email: 'example@gmail.com', 
             password: 'password', 
             password_confirmation: 'password'
             )
